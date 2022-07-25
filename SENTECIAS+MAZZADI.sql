@@ -1,0 +1,10 @@
+#CREAMOS EL USUARIO GUIDO Y LE ASIGNAMOS UNA CONTRASEÑA
+create user guido@localhost identified by "contraseña123";
+#CREAMOS EL USUARIO LUCIANO Y LE ASIGNAMOS UNA CONTRASEÑA
+create user luciano@localhost identified by "contraseña456";
+
+#LE ASIGNAMOS EL PERMISO DE LECTURA AL USUARIO LUCIANO
+GRANT SELECT ON freres.* TO luciano@localhost;
+#LE ASINGNAMOS EL PERMISO DE LECTURA, INSERCION, Y MODIFICACION A GUIDO.
+GRANT SELECT,INSERT, UPDATE, ALTER ON freres.* to guido@localhost;
+
